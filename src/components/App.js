@@ -35,8 +35,8 @@ class App extends React.Component {
             <Route path='/dashboard' component={Dashboard} />
             <Route path='/journal' render={()=><GeneralJournal masterGeneralJournal={this.props.masterGeneralJournal} />} />
             <Route path='/journal-entry' render={()=><NewEntryControl/>} />
-            <Route path='/med-digest' component={MedHistoryDigest} />
-            <Route path='/med-milestone' component={NewMedHistoryMilestoneForm} />
+            <Route path='/med-digest' render={()=><MedHistoryDigest medHistoryDigest={this.props.medHistoryDigest} />} />
+            <Route path='/med-milestone' render={()=><NewMedHistoryMilestoneForm/>}/>
             <Route path='/exp-digest' component={MSExperienceDigest} />
             <Route path='/exp-milestone' component={NewMSExperienceMilestoneForm} />
             <Route path='/about' component={About} />
@@ -49,12 +49,15 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  masterGeneralJournal: PropTypes.object
+  masterGeneralJournal: PropTypes.object,
+  medHistoryDigest: PropTypes.object
 };
 
 const mapStateToProps = state =>{
   return {
-    masterGeneralJournal: state.masterGeneralJournal
+    masterGeneralJournal: state.masterGeneralJournal,
+    medHistoryDigest: state.medHistoryDigest
+
   }
 }
 

@@ -22,11 +22,11 @@ function Header(){
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="#signin">Sign In</Nav.Link>
-              <NavDropdown title="Medical Story" className="collapsible-nav-dropdown">
+              <NavDropdown title="Medical" className="collapsible-nav-dropdown">
                 <NavDropdown.Item href="#med-digest">See all entries</NavDropdown.Item>
                 <NavDropdown.Item href="#med-milestone">Add new medical</NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="Selfcare Story" className="collapsible-nav-dropdown">
+              <NavDropdown title="Selfcare" className="collapsible-nav-dropdown">
                 <NavDropdown.Item href="#exp-digest">See all entries</NavDropdown.Item>
                 <NavDropdown.Item href="#exp-milestone">Add new selfcare</NavDropdown.Item>
               </NavDropdown>

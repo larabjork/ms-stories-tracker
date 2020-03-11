@@ -36,7 +36,7 @@ function NewGeneralJournalRecordForm(props) {
           id='journalEntry'
           placeholder="What's happening?"
           ref={(textarea) => {_journalEntry = textarea;}}/>
-        <button type='submit'>Submit!</button>
+        <button type='submit'>Save!</button>
       </form>
     </div>
   )

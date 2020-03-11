@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 
 function GeneralJournal(props){
-  console.log(props);
   return (
     <div>
       <h1>My Anything-Goes-Here Journal</h1>

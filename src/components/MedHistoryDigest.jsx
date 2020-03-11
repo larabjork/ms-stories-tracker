@@ -1,28 +1,27 @@
 import React from 'react';
 import MedHistoryMilestone from './MedHistoryMilestone';
-
-const masterMedHistoryDigest = [
-  {
-      date: "7/5/2010",
-      historyEvent: "Initial symptoms"
-  }
-]
+import PropTypes from 'prop-types';
 
 
 
-
-function MedHistoryDigest(){
+function MedHistoryDigest(props){
   return (
     <div>
       <h1>My Medical History</h1>
-      {masterMedHistoryDigest.map((entry, index) =>
-        <MedHistoryMilestone date={entry.date}
-          historyEvent={entry.historyEvent}
-          key={index} />
-      )}
-
+        {Object.keys(props.medHistoryDigest).map(function(eventId) {
+          const event = props.medHistoryDigest[eventId];
+          return <MedHistoryDigest date={event.date}
+          historyEvent={event.historyEvent}
+          key={eventId}
+          eventId={eventId} />;
+        })}
     </div>
-  )
+  );
+};
+
+MedHistoryDigest.propTypes = {
+  medHistoryDigest: PropTypes.object,
+  currentRouterPath: PropTypes.string
 };
 
 export default MedHistoryDigest;
