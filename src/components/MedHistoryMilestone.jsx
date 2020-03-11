@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import './../JournalForm.css';
 
 function MedHistoryMilestone(props){
   return (
       <div>
-        <h5>Date: {props.date} </h5>
+        <h6 className="date">Date: {props.date} </h6>
         <p>Event: {props.historyEvent}</p>
       </div>
   );
