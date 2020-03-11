@@ -5,11 +5,11 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_MEDICAL':
-    const { date, historyEvent, id } = action;
+    const { dateMed, historyEvent, id } = action;
     let newState = {...state}
     let newJournal = {...newState.medHistoryDigest}
      newJournal[id]= {
-        date: date,
+        dateMed: dateMed,
         historyEvent: historyEvent,
         id: id
       };

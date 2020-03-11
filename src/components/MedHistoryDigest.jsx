@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 
 
 function MedHistoryDigest(props){
+  console.log(props);
   return (
     <div>
       <h1>My Medical History</h1>
         {Object.keys(props.medHistoryDigest).map(function(eventId) {
           const event = props.medHistoryDigest[eventId];
-          return <MedHistoryDigest date={event.date}
+          return <MedHistoryMilestone dateMed={event.dateMed}
           historyEvent={event.historyEvent}
           key={eventId}
           eventId={eventId} />;

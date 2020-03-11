@@ -5,14 +5,14 @@ import './../JournalForm.css';
 function MedHistoryMilestone(props){
   return (
       <div>
-        <h6 className="date">Date: {props.date} </h6>
+        <h6 className="date">Date: {props.dateMed} </h6>
         <p>Event: {props.historyEvent}</p>
       </div>
   );
 }
 
 MedHistoryMilestone.propTypes = {
-  date: PropTypes.string,
+  dateMed: PropTypes.string,
   historyEvent: PropTypes.string
 };
 
