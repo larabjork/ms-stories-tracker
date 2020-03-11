@@ -25,6 +25,7 @@ function NewMedHistoryMilestoneForm(props){
 
   return (
     <div>
+
       <form onSubmit={handleNewMedHistoryMilestoneSubmit}>
         <input
           type='text'

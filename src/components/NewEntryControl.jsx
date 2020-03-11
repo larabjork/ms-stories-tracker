@@ -27,8 +27,8 @@ class NewEntryControl extends React.Component {
     let currentlyVisibleContent = null;
     if (this.state.journalFormVisibleOnPage){
       currentlyVisibleContent = <NewGeneralJournalRecordForm onNewJournalEntryCreation={this.props.onNewJournalEntryCreation}/>
-    } elseif (this.state.medMilestoneFormVisibleOnPage){
-     currentlyVisibleContent = <NewMedHistoryMilestoneForm onNewMedMilestoneEntryCreation={this.props.onNewMedMilestoneEntryCreation}/>
+    // } elseif (this.state.medMilestoneFormVisibleOnPage){
+    //  currentlyVisibleContent = <NewMedHistoryMilestoneForm onNewMedMilestoneEntryCreation={this.props.onNewMedMilestoneEntryCreation}/>
     } else {
       currentlyVisibleContent = <Dashboard onStartNewJournalEntry={this.handleStartNewJournalEntry}/>;
     }
