@@ -2,7 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 
-
+const btnStyle = {
+  backgroundColor: '#210124cd',
+  borderColor: '#210124cd',
+  borderRadius: '5px',
+  color: 'white',
+  fontWeight: 'bold',
+  padding: '10px',
+  paddingRight: '20px',
+  paddingLeft: '20px'
+}
 
 
 function NewMedHistoryMilestoneForm(props){
@@ -37,7 +46,7 @@ function NewMedHistoryMilestoneForm(props){
           id='historyEvent'
           placeholder="Milestone details here: symptom, diagnosis, test, medication etc."
           ref={(textarea) => {_historyEvent =  textarea;}}/>
-        <button type='submit'>Save!</button>
+        <button type='submit' style={btnStyle}>Save!</button>
       </form>
     </div>
   )
