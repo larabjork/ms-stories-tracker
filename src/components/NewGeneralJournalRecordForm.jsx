@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import './../JournalForm.css';
+import { Image }  from 'react-bootstrap';
+
+
 
 const btnStyle = {
   backgroundColor: '#210124cd',
@@ -35,7 +38,8 @@ function NewGeneralJournalRecordForm(props) {
   return (
     <div>
     <br/>
-    <h1 className="head">Today's Thoughts</h1>
+    <h1 className="head">Today's Thoughts<br/><br/>
+    <Image src="icons8-microphone-64.png"/></h1>
       <form onSubmit={handleNewJournalEntrySubmit} className="paper">
         <input
           type='text'
@@ -48,6 +52,9 @@ function NewGeneralJournalRecordForm(props) {
           ref={(textarea) => {_journalEntry = textarea;}}/>
         <button type='submit' style={btnStyle}>Save!</button>
       </form>
+
+
+
     </div>
   )
 }
