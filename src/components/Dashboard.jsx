@@ -1,23 +1,47 @@
 import React from 'react';
-import { Container, Button }  from 'react-bootstrap';
-import PropTypes from 'prop-types';
+import { Container, Row, Col, Image }  from 'react-bootstrap';
+import './../JournalForm.css';
 
-const btnStyle = {
-  backgroundColor: '#3C0142cd',
-  borderColor: '#3C0142cd',
-  color: 'white',
-  borderRadius: '3px'
+const iconCaption = {
+  paddingTop: "15px"
+}
+const gridCentering = {
+  textAlign: "center",
 }
 
-function Dashboard(props) {
+function Dashboard() {
   return(
     <div>
       <Container>
-        <h1>Story Dashboard</h1>
-        <h2>accordion style views of three different journals; most recent entries showing by default?</h2>
-        <h1>Ready to add to your story?</h1>
-        <Button onClick={props.onStartNewJournalEntry} style={btnStyle}>Journal Time!</Button>
-        <Button onClick={props.onStartNewMedMilestone} style={btnStyle}>Medical Info!</Button>
+        <h1>My Story Dashboard</h1>
+        <Row style={gridCentering}>
+          <Col xs={6} md={4}>
+              <Image src="icons8-treatment-80.png"/><h6 style={iconCaption}><strong>My Most Recent Medical Milestone </strong></h6>
+              <br/>
+          </Col>
+          <Col xs={6} md={4}>
+            <Image src="icons8-reflection-80.png"/><h6 style={iconCaption}><strong>My Latest Self Care Victory</strong></h6>
+            <br/>
+          </Col>
+          <Col xs={6} md={4}>
+            <Image src="icons8-journal-80.png"/><h6 style={iconCaption}><strong>What I've Been Thinking About </strong></h6>
+            <br/>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={6} md={4}>
+            <p className="date">2/17/2020</p>
+            <p> Tysabri infusion, no post infusion reactions</p>
+          </Col>
+          <Col xs={6} md={4}>
+            <p className="date">12/1/2019</p>
+            <p>Found new acupuncturist!</p>
+          </Col>
+          <Col xs={6} md={4}>
+            <p className="date">3/1/2020</p>
+            <p>There's so much happening, where to start...</p>
+          </Col>
+        </Row>
 
 
 
@@ -26,9 +50,5 @@ function Dashboard(props) {
   )
 }
 
-Dashboard.propTypes ={
-  onStartNewJournalEntry: PropTypes.func,
-  onStartNewMedMilestone: PropTypes.func
-};
 
 export default Dashboard;
