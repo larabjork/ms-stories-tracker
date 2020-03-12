@@ -25,6 +25,8 @@ function NewGeneralJournalRecordForm(props) {
 
   return (
     <div>
+    <br/>
+    <h1 className="head">Today's thoughts...</h1>
       <form onSubmit={handleNewJournalEntrySubmit} className="paper">
         <input
           type='text'
