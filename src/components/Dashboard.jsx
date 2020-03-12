@@ -17,6 +17,7 @@ function Dashboard(props) {
         <h2>accordion style views of three different journals; most recent entries showing by default?</h2>
         <h1>Ready to add to your story?</h1>
         <Button onClick={props.onStartNewJournalEntry} style={btnStyle}>Journal Time!</Button>
+        <Button onClick={props.onStartNewMedMilestone} style={btnStyle}>Medical Info!</Button>
 
 
 
@@ -26,7 +27,8 @@ function Dashboard(props) {
 }
 
 Dashboard.propTypes ={
-  onStartNewJournalEntry: PropTypes.func
+  onStartNewJournalEntry: PropTypes.func,
+  onStartNewMedMilestone: PropTypes.func
 };
 
 export default Dashboard;

@@ -8,8 +8,8 @@ import Error404 from './Error404';
 import About from './About';
 import Home from './Home';
 import Signin from './Signin';
-import Dashboard from './Dashboard';
 import GeneralJournal from './GeneralJournal';
+import NewGeneralJournalRecordForm from './NewGeneralJournalRecordForm';
 import NewEntryControl from './NewEntryControl';
 import MedHistoryDigest from './MedHistoryDigest';
 import NewMedHistoryMilestoneForm from './NewMedHistoryMilestoneForm';
@@ -33,9 +33,9 @@ class App extends React.Component {
             <Route path='/signin' component={Signin} />
             <Route path='/dashboard' component={Dashboard} />
             <Route path='/journal' render={()=><GeneralJournal masterGeneralJournal={this.props.masterGeneralJournal} />} />
-            <Route path='/journal-entry' render={()=><NewEntryControl/>} />
+            <Route path='/journal-entry' render={()=><NewGeneralJournalRecordForm/>} />
             <Route path='/med-digest' render={()=><MedHistoryDigest medHistoryDigest={this.props.medHistoryDigest} />} />
-            <Route path='/med-milestone' render={()=><NewMedHistoryMilestoneForm/>}/>
+            <Route path='/med-milestone' render={()=><NewMedHistoryMilestoneForm/>} />
             <Route path='/exp-digest' component={MSExperienceDigest} />
             <Route path='/exp-milestone' component={NewMSExperienceMilestoneForm} />
             <Route path='/about' component={About} />
