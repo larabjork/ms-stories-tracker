@@ -57,10 +57,11 @@ function About(){
             <li><strong>Why:</strong> I didn't stop being a person when I became an MS patient. Sometimes, I just need a place to process all of this</li>
             <li><strong>Why:</strong> When I look back at my journals over time, it has helped me see how MS has affected my life</li>
           </ul>
-                      <br/>
+          <br/>
           </Col>
         </Row>
-
+        <br/>
+        <h2>So that's where the idea for <span className="brandName">My MS Stories</span> came from. I hope you find it useful in your MS journey!</h2>
     </Container>
     </div>
   );

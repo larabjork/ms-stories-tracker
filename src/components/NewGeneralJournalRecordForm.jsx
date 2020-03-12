@@ -3,7 +3,16 @@ import { connect } from 'react-redux';
 import { v4 } from 'uuid';
 import './../JournalForm.css';
 
-
+const btnStyle = {
+  backgroundColor: '#210124cd',
+  borderColor: '#210124cd',
+  borderRadius: '5px',
+  color: 'white',
+  fontWeight: 'bold',
+  padding: '10px',
+  paddingRight: '20px',
+  paddingLeft: '20px'
+}
 
 function NewGeneralJournalRecordForm(props) {
   let _date = null;
@@ -26,7 +35,7 @@ function NewGeneralJournalRecordForm(props) {
   return (
     <div>
     <br/>
-    <h1 className="head">Today's thoughts...</h1>
+    <h1 className="head">Today's Thoughts</h1>
       <form onSubmit={handleNewJournalEntrySubmit} className="paper">
         <input
           type='text'
@@ -37,7 +46,7 @@ function NewGeneralJournalRecordForm(props) {
           id='journalEntry'
           placeholder="What's happening?"
           ref={(textarea) => {_journalEntry = textarea;}}/>
-        <button type='submit'>Save!</button>
+        <button type='submit' style={btnStyle}>Save!</button>
       </form>
     </div>
   )
