@@ -72,3 +72,21 @@ const btnStyle = {
 <br/>
 <br/>
 <Button style={btnStyle} to="/about" renderas={Link}>Tell Me More</Button>
+
+
+<Row style={gridCentering}>
+  <Col xs={6} md={4}>
+      <Image src="icons8-treatment-80.png"/><h6 style={iconCaption}><strong>Medical Care</strong></h6>
+      <ul>
+        <li>What: Appointments, tests, medications, symptoms, relapses&mdash;the items that are tracked in my medical records</li>
+        <li>Why: My neurologist wants to talk about them at each visit.</li>
+        <li>Why: When I see a new doctor, I need easy access to this information.</li>
+      </ul>
+  </Col>
+  <Col xs={6} md={4}>
+    <Image src="icons8-reflection-80.png"/><h6 style={iconCaption}><strong>Self Care: </strong>I've also tried a lot of things that are good for me, but that aren't a focus of my neurologist visits. Over the years, I've experimented with various kinds of self care (my favorites: exercise, acupuncture, and talk therapy). Having a list of these strategies helps me feel good about how I'm taking care of myself.</h6>
+  </Col>
+  <Col xs={6} md={4}>
+    <Image src="icons8-journal-80.png"/><h6 style={iconCaption}><strong>Living: </strong>I didn't stop being a person when I became an MS patient, so I have the normal events, emotions, activities, and stuff that comes with living. Sometimes, I just need a place to process all of this, and when I look back at my journals over time, it has helped me see how MS has affected my life.</h6>
+  </Col>
+</Row>
