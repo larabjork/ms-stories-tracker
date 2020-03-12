@@ -62,6 +62,9 @@ function About(){
         </Row>
         <br/>
         <h2>So that's where the idea for <span className="brandName">My MS Stories</span> came from. I hope you find it useful in your MS journey!</h2>
+
+      <p>Credit for all icons: <a href={"icons8.com"}>icons8.com</a></p>
+
     </Container>
     </div>
   );
