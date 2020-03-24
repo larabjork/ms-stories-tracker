@@ -2,7 +2,7 @@ import React from 'react';
 import './../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container   }from 'react-bootstrap';
-import { Switch, Route, withRouter } from 'react-router-dom';
+import { Switch, Route, HashRouter, withRouter } from 'react-router-dom';
 import Header from './Header';
 import Error404 from './Error404';
 import About from './About';
@@ -27,6 +27,7 @@ class App extends React.Component {
       <div className="bodyDiv">
         <Header/>
         <Container>
+          <HashRouter>
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path='/home' component={Home} />
@@ -41,6 +42,7 @@ class App extends React.Component {
             <Route path='/about' component={About} />
             <Route component={Error404} />
           </Switch>
+        </HashRouter>
         </Container>
       </div>
     );
