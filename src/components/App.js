@@ -2,7 +2,7 @@ import React from 'react';
 import './../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container   }from 'react-bootstrap';
-import { Switch, Route, HashRouter, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, HashRouter } from 'react-router-dom';
 import Header from './Header';
 import Error404 from './Error404';
 import About from './About';
