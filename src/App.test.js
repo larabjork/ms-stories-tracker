@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './components/App';
-import {  withRouter } from 'react-router-dom';
+import {  HashRouter, withRouter } from 'react-router-dom';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
