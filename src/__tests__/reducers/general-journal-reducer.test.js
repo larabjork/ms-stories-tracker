@@ -13,6 +13,21 @@ describe ('generalJournalReducer', () => {
    expect(generalJournalReducer({}, {type: null})).toEqual({});
  });
 
+  test('Should successfully add new journal entry to masterGeneralJournal', () => {
+     const { date, journalEntry, id } = sampleJournalData;
+     action = {
+      type: 'ADD_JOURNAL',
+      date: date,
+      journalEntry: journalEntry,
+      id: id
+     };
+     expect(generalJournalReducer({}, action)).toEqual({[id] : {
+      date: date,
+      journalEntry: journalEntry,
+      id: id
+     }
+    });
+  });
 
 
 });
