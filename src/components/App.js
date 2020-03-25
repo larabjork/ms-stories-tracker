@@ -20,30 +20,32 @@ import PropTypes from 'prop-types';
 
 class App extends React.Component {
 
-
+  
 
   render(){
     return (
       <div className="bodyDiv">
-        <Header/>
-        <Container>
-          <HashRouter>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/home' component={Home} />
-            <Route path='/signin' component={Signin} />
-            <Route path='/dashboard' component={Dashboard} />
-            <Route path='/journal' render={()=><GeneralJournal masterGeneralJournal={this.props.masterGeneralJournal} />} />
-            <Route path='/journal-entry' render={()=><NewGeneralJournalRecordForm/>} />
-            <Route path='/med-digest' render={()=><MedHistoryDigest medHistoryDigest={this.props.medHistoryDigest} />} />
-            <Route path='/med-milestone' render={()=><NewMedHistoryMilestoneForm/>} />
-            <Route path='/exp-digest' component={MSExperienceDigest} />
-            <Route path='/exp-milestone' component={NewMSExperienceMilestoneForm} />
-            <Route path='/about' component={About} />
-            <Route component={Error404} />
-          </Switch>
+        <HashRouter>
+          <div>
+            <Header/>
+            <Container>
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/home' component={Home} />
+                <Route path='/signin' component={Signin} />
+                <Route path='/dashboard' component={Dashboard} />
+                <Route path='/journal' render={()=><GeneralJournal masterGeneralJournal={this.props.masterGeneralJournal} />} />
+                <Route path='/journal-entry' render={()=><NewGeneralJournalRecordForm/>} />
+                <Route path='/med-digest' render={()=><MedHistoryDigest medHistoryDigest={this.props.medHistoryDigest} />} />
+                <Route path='/med-milestone' render={()=><NewMedHistoryMilestoneForm/>} />
+                <Route path='/exp-digest' component={MSExperienceDigest} />
+                <Route path='/exp-milestone' component={NewMSExperienceMilestoneForm} />
+                <Route path='/about' component={About} />
+                <Route component={Error404} />
+              </Switch>
+            </Container>
+          </div>
         </HashRouter>
-        </Container>
       </div>
     );
   }

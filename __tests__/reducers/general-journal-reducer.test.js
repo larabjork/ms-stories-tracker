@@ -1,4 +1,4 @@
-import ticketListReducer from './../../src/reducers/general-journal-reducer';
+import generalJournalReducer from './../../src/reducers/general-journal-reducer';
 
 
 describe ('generalJournalReducer', () => {

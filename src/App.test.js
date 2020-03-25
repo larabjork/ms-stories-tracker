@@ -1,10 +1,19 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import store from './app/store';
 import App from './components/App';
-import {  HashRouter, withRouter } from 'react-router-dom';
+import { Switch, Route, withRouter, HashRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+test('renders You are more than your diagnosis', () => {
+  const { getByText } = render(
+    <HashRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </HashRouter>
+  );
+
+  expect(getByText(/you are more/i)).toBeInTheDocument();
 });
