@@ -2,10 +2,10 @@ const initialState = {
   masterGeneralJournal: {}
 }
 
-export default (state = initialState, action) => {
+export default (state = {}, action) => {
+  const { date, journalEntry, id } = action;
   switch (action.type) {
   case 'ADD_JOURNAL':
-    const { date, journalEntry, id } = action;
     return Object.assign({}, state, {
       [id]: {
         date: date,
@@ -13,6 +13,10 @@ export default (state = initialState, action) => {
         id: id
       }
     });
+  case 'DELETE_TICKET':
+    const newState = { ...state };
+    delete newState[id];
+    return newState;
   default:
     return state;
   }
