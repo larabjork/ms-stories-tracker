@@ -1,4 +1,4 @@
-import generalJournalReducer from './../../src/reducers/general-journal-reducer';
+import generalJournalReducer from '../../reducers/general-journal-reducer';
 
 
 describe ('generalJournalReducer', () => {
