@@ -3,6 +3,12 @@ import generalJournalReducer from '../../reducers/general-journal-reducer';
 
 describe ('generalJournalReducer', () => {
   let action;
+  const sampleJournalData = {
+    date: '1/2/19',
+    journalEntry: 'lots of lorem impsum here',
+    id: 1
+  };
+
   const currentState = {
     1: {date: '1/2/19',
     journalEntry: 'lots of lorem impsum here',
@@ -12,11 +18,15 @@ describe ('generalJournalReducer', () => {
     id: 2}
   };
 
-  const sampleJournalData = {
-    date: '1/2/19',
+  const newState = {
+    1: {date: '1/2/19',
     journalEntry: 'lots of lorem impsum here',
-    id: 1
+    id: 1},
+    3: {date: '1/2/21',
+    journalEntry: 'I am going to edit this date and maybe this text too',
+    id: 3},
   };
+
 
   test('Should return default state if no action type is recognized', () => {
     expect(generalJournalReducer({}, {type: null})).toEqual({});
@@ -40,7 +50,7 @@ describe ('generalJournalReducer', () => {
 
   test('Should successfully delete a journal entry', () => {
     action = {
-      type: 'DELETE_TICKET',
+      type: 'DELETE_JOURNAL',
       id: 2
     };
     expect(generalJournalReducer(currentState, action)).toEqual({
@@ -49,6 +59,8 @@ describe ('generalJournalReducer', () => {
       id: 1}
   });
 });
+
+
 
 
 });
