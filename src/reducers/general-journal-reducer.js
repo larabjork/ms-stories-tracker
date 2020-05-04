@@ -2,7 +2,7 @@ const initialState = {
   masterGeneralJournal: {}
 }
 
-export default (state = {}, action) => {
+export default (state = initialState, action) => {
   const { date, journalEntry, id } = action;
   switch (action.type) {
   case 'ADD_JOURNAL':
@@ -13,7 +13,7 @@ export default (state = {}, action) => {
         id: id
       }
     });
-  case 'DELETE_TICKET':
+  case 'DELETE_JOURNAL':
     const newState = { ...state };
     delete newState[id];
     return newState;

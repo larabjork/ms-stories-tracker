@@ -3,21 +3,22 @@ const initialState = {
 }
 
 export default (state = initialState, action) => {
-  switch (action.type) {
-    case 'ADD_MEDICAL':
     const { dateMed, historyEvent, id } = action;
-    let newState = {...state}
-    let newJournal = {...newState.medHistoryDigest}
-     newJournal[id]= {
+    switch (action.type) {
+    case 'ADD_MEDICAL':
+      return Object.assign({}, state, {
+      [id]: {
         dateMed: dateMed,
         historyEvent: historyEvent,
         id: id
-      };
-    newState.medHistoryDigest = newMedical
-    console.log(newState);
-
-    return newState;
+      }
+     });
+    case 'DELETE_MEDICAL':
+      const newState = { ...state };
+      delete newState[id];
+      return newState;
   default:
     return state;
-};
+  };
 }
+

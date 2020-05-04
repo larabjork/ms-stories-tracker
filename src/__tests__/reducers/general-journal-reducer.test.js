@@ -57,8 +57,8 @@ describe ('generalJournalReducer', () => {
       1: {date: '1/2/19',
       journalEntry: 'lots of lorem impsum here',
       id: 1}
+    });
   });
-});
 
 
 

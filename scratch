@@ -1,0 +1,40 @@
+DRAFT TEST FOR UPDATE/EDIT journal  test('Should successfully update a journal entry', () => {
+    action = {
+      type: 'UPDATE_JOURNAL',
+      date: '1/21/20',
+      journalEntry: 'I did it!',
+      id: 3
+    };
+    expect(generalJournalReducer(newState, action)).toEqual({
+      1: {date: '1/2/19',
+      journalEntry: 'lots of lorem impsum here',
+      id: 1},
+      3: {date: '1/21/20',
+      journalEntry: 'I did it!',
+      id: 3}
+  });
+});
+
+****************
+
+
+OLD VERSION OF STATE PER LIAM
+// export default (state = initialState, action) => {
+//   switch (action.type) {
+//   case 'ADD_JOURNAL':
+//     const { date, journalEntry, id } = action;
+//     let newState = {...state}
+//     let newJournal = {...newState.masterGeneralJournal}
+//      newJournal[id]= {
+//         date: date,
+//         journalEntry: journalEntry,
+//         id: id
+//       };
+//     newState.masterGeneralJournal = newJournal
+//
+//
+//     return newState;
+//   default:
+//     return state;
+// };
+// }
